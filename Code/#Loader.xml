@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>#Loader</name>
+    <events>
+        <event-block sid="603506894752107">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="846729031367420" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="469867606699660" type="textTest">
+                    <param id="0" name="Text">&quot;Loading: &quot;&amp;loadingprogress&amp;&quot;%&quot;</param>
+                </action>
+                <action id="14" name="Set width" sid="824795748316076" type="NWjs">
+                    <param id="0" name="Width">1024</param>
+                </action>
+                <action id="15" name="Set height" sid="530573193329460" type="NWjs">
+                    <param id="0" name="Height">512</param>
+                </action>
+                <action id="12" name="Set X" sid="505583237247636" type="NWjs">
+                    <param id="0" name="X">200</param>
+                </action>
+                <action id="13" name="Set Y" sid="678265468751621" type="NWjs">
+                    <param id="0" name="Y">150</param>
+                </action>
+                <action id="4" name="Append file" sid="101804379930271" type="NWjs">
+                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;---------------------------------------------------------------------------------------&quot;&amp;newline&amp;&quot;Run Game.&quot;&amp;newline</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="139057780180187">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="237581991066227" type="System">
+                    <param id="0" name="Interval (seconds)">0.01</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="163921342981827" type="textTest">
+                    <param id="0" name="Text">&quot;Loading: &quot;&amp;loadingprogress&amp;&quot;%&quot;</param>
+                </action>
+                <action id="4" name="Append file" sid="574840125426060" type="NWjs">
+                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Loading game:&quot;&amp;loadingprogress&amp;&quot;%.&quot;&amp;newline</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="329378731875502">
+            <conditions>
+                <condition id="-25" name="On loader layout complete" sid="397771349808376" type="System" />
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="604720283041677" type="System">
+                    <param id="0" name="Layout">MainMenu</param>
+                </action>
+                <action id="4" name="Append file" sid="128398190620462" type="NWjs">
+                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Loading Layout Complite, go to MainMenu&quot;&amp;&quot;.&quot;&amp;newline</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,1630 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>#MainMenu</name>
+    <events>
+        <variable constant="0" name="Generator" sid="132156941982740" static="0" type="text">False</variable>
+        <variable constant="0" name="SizeWorld" sid="730582176678146" static="0" type="text">XS</variable>
+        <variable constant="0" name="Conf_Autosave" sid="965280343408070" static="0" type="text">True</variable>
+        <variable constant="0" name="World" sid="674991851966187" static="0" type="number">0</variable>
+        <variable constant="0" name="Perekluchatel" sid="242629709890145" static="0" type="number">0</variable>
+        <event-block sid="325971383910207">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="194422117075673" type="System" />
+            </conditions>
+            <actions>
+                <action id="16" name="Set title" sid="197044694193164" type="NWjs">
+                    <param id="0" name="Title">&quot;Tech-Industrial &quot;&amp;projectversion&amp;&quot; by: kogtyv&quot;</param>
+                </action>
+                <action id="14" name="Set width" sid="383513717722107" type="NWjs">
+                    <param id="0" name="Width">1024</param>
+                </action>
+                <action id="15" name="Set height" sid="426378682658419" type="NWjs">
+                    <param id="0" name="Height">512</param>
+                </action>
+                <action id="12" name="Set X" sid="552088981386951" type="NWjs">
+                    <param id="0" name="X">200</param>
+                </action>
+                <action id="13" name="Set Y" sid="451731974727276" type="NWjs">
+                    <param id="0" name="Y">150</param>
+                </action>
+                <action id="0" name="Add advanced notification" sid="502906218113666" type="Notifications">
+                    <param id="0" name="Title">&quot;kogtyv&quot;</param>
+                    <param id="1" name="Text">&quot;you use free license! by: SoftManGO Studio&quot;</param>
+                    <param id="2" name="Image">&quot;data:image/jpeg;base64,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&quot;</param>
+                    <param id="3" name="Sticky">0</param>
+                    <param id="4" name="Notification style">1</param>
+                    <param id="5" name="Time">25000</param>
+                </action>
+                <action id="-3" name="Create object" sid="774172729453509" type="System">
+                    <param id="0" name="Object to create">Button</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">158</param>
+                    <param id="3" name="Y">56</param>
+                </action>
+                <action id="-10" name="Set value" sid="884624968346678" type="Button">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-3" name="Create object" sid="126570181667966" type="System">
+                    <param id="0" name="Object to create">Text_menu</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">140</param>
+                    <param id="3" name="Y">50</param>
+                </action>
+                <action id="-10" name="Set value" sid="575827256049860" type="Text_menu">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="704335144725711" type="Text_menu">
+                    <param id="0" name="Text">&quot;Play&quot;</param>
+                </action>
+                <action id="-10" name="Set value" sid="239635253403241" type="Button">
+                    <param id="0" name="Instance variable">Text</param>
+                    <param id="1" name="Value">&quot;Play&quot;</param>
+                </action>
+                <action id="-3" name="Create object" sid="809467499826534" type="System">
+                    <param id="0" name="Object to create">Button</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">158</param>
+                    <param id="3" name="Y">80</param>
+                </action>
+                <action id="-10" name="Set value" sid="443337692122512" type="Button">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Value">400</param>
+                </action>
+                <action id="-3" name="Create object" sid="660202000245484" type="System">
+                    <param id="0" name="Object to create">Seed_text</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="X">140</param>
+                    <param id="3" name="Y">75</param>
+                </action>
+                <action id="0" name="Set text" sid="592329836273250" type="Seed_text">
+                    <param id="0" name="Text">&quot;Options&quot;</param>
+                </action>
+                <action behavior="Anchor" id="0" name="Set enabled" sid="552570335604902" type="Seed_text">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action id="4" name="Append file" sid="471916444601196" type="NWjs">
+                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Set Window of parameters: &quot;&amp;&quot;X:&quot;&amp;NWjs.WindowX&amp;&quot;, Y:&quot;&amp;NWjs.WindowY&amp;&quot;, Width:&quot;&amp;NWjs.WindowWidth&amp;&quot;, Height&quot;&amp;NWjs.WindowHeight&amp;&quot;, Title:&quot;&amp;NWjs.WindowTitle&amp;&quot;.&quot;&amp;newline</param>
+                </action>
+                <action id="4" name="Append file" sid="115278664337979" type="NWjs">
+                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;System Parameters: &quot;&amp;&quot;ImageMemoryUsage:&quot;&amp;ImageMemoryUsage&amp;&quot;, render:&quot;&amp;renderer&amp;&quot;, renderDetail:&quot;&amp;rendererDetail&amp;&quot;, wallclocktime:&quot;&amp;wallclocktime&amp;&quot;, BattereyLevel:&quot;&amp;Browser.BatteryLevel&amp;&quot;, BattereyTimeLeft:&quot;&amp;Browser.BatteryTimeLeft&amp;&quot;, Platform:&quot;&amp;Browser.Platform&amp;&quot;, Product:&quot;&amp;Browser.Product&amp;&quot;, VersionBrowser:&quot;&amp;Browser.Version&amp;&quot;, ConnectionType:&quot;&amp;Browser.ConnectionType&amp;&quot;.&quot;&amp;newline</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="863738461791461">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Path exists" sid="970947089709078" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Create folder" sid="331110064247488" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\&quot;</param>
+                        </action>
+                        <action id="3" name="Create folder" sid="816657148514424" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\&quot;</param>
+                        </action>
+                        <action id="3" name="Create folder" sid="294421976339468" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds\&quot;</param>
+                        </action>
+                        <action id="3" name="Create folder" sid="525845275029457" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="440589624439827">
+                    <conditions>
+                        <condition id="0" inverted="1" name="Path exists" sid="559445710245415" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Create folder" sid="105525690469016" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="211966210473295">
+                    <conditions>
+                        <condition id="0" name="Path exists" sid="427311200767623" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Autosave.conf&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="535476401383227" type="System">
+                            <param id="0" name="Variable">Conf_Autosave</param>
+                            <param id="1" name="Value">NWjs.ReadFile(NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Autosave.conf&quot;)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="197734947436340">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="647066675691155" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="863720913694380" type="Button">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="969342774033117">
+                    <conditions>
+                        <condition id="0" name="Path exists" sid="242192115957294" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds\World_1.svs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="273961844281602" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;World 1&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="449636460462967">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="668992032666924" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;World 1&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="762886264542209" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="632779130286617" type="System">
+                            <param id="0" name="Variable">Generator</param>
+                            <param id="1" name="Value">&quot;False&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="976085663097331" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Loading world: &quot;&amp;World&amp;&quot; Generator: &quot;&amp;Generator&amp;&quot;.&quot;&amp;newline</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="204946364933739" type="System">
+                            <param id="0" name="Layout">&quot;Game&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="108680745751267">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="819465117096858" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;empty&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="302405459078769" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="172925152786551" type="System">
+                            <param id="0" name="Variable">Generator</param>
+                            <param id="1" name="Value">&quot;True&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="912258887825436" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Create world: &quot;&amp;World&amp;&quot;, Generator: &quot;&amp;Generator&amp;&quot;.&quot;&amp;newline</param>
+                        </action>
+                        <action id="0" name="Call function" sid="147797566292921" type="Function">
+                            <param id="0" name="Name">&quot;SetButtonWorld&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="437817537617019">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="788144055423971" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="132795891709181" type="Button">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="551653832354919">
+                    <conditions>
+                        <condition id="0" name="Path exists" sid="134630751987073" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds\World_2.svs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="345087492404683" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;World 2&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="883691927285139">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="258309587689003" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;World 2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="135255801859003" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="740693699707499" type="System">
+                            <param id="0" name="Variable">Generator</param>
+                            <param id="1" name="Value">&quot;False&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="939222709388502" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Loading world: &quot;&amp;World&amp;&quot; Generator: &quot;&amp;Generator&amp;&quot;.&quot;&amp;newline</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="771563372832862" type="System">
+                            <param id="0" name="Layout">&quot;Game&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="627033172369390">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="149986192978447" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;empty&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="402000729407911" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="352855504888102" type="System">
+                            <param id="0" name="Variable">Generator</param>
+                            <param id="1" name="Value">&quot;True&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="550392064718205" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Create world: &quot;&amp;World&amp;&quot;, Generator: &quot;&amp;Generator&amp;&quot;.&quot;&amp;newline</param>
+                        </action>
+                        <action id="0" name="Call function" sid="978674905014433" type="Function">
+                            <param id="0" name="Name">&quot;SetButtonWorld&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="293555812962159">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="848127488408078" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="233268063616407" type="Button">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="351366387954101">
+                    <conditions>
+                        <condition id="0" name="Path exists" sid="510245435820287" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds\World_3.svs&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="284906824409445" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;World 3&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="435563936306871">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="260756538222554" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;World 3&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="486753376753947" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="956299201893976" type="System">
+                            <param id="0" name="Variable">Generator</param>
+                            <param id="1" name="Value">&quot;False&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="701682173557983" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Loading world: &quot;&amp;World&amp;&quot; Generator: &quot;&amp;Generator&amp;&quot;.&quot;&amp;newline</param>
+                        </action>
+                        <action id="-25" name="Go to layout (by name)" sid="615084991199225" type="System">
+                            <param id="0" name="Layout">&quot;Game&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="459133019379945">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="904039251055326" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;empty&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="776356442536607" type="System">
+                            <param id="0" name="Variable">World</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="911210058505492" type="System">
+                            <param id="0" name="Variable">Generator</param>
+                            <param id="1" name="Value">&quot;True&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="593171412200715" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Create world: &quot;&amp;World&amp;&quot;, Generator: &quot;&amp;Generator&amp;&quot;.&quot;&amp;newline</param>
+                        </action>
+                        <action id="0" name="Call function" sid="320535068376073" type="Function">
+                            <param id="0" name="Name">&quot;SetButtonWorld&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="196873358067419">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="143414827664138" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="508327844835411" type="Button">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="284632353495538" type="Button" />
+                <action id="-9" name="Destroy" sid="772799701005392" type="Text_menu" />
+                <action id="-9" name="Destroy" sid="243388449948135" type="Seed_text" />
+            </actions>
+            <sub-events>
+                <event-block sid="903805250023057">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="257070093926048" type="System">
+                            <param id="0" name="Object">Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="102942590538529" type="Button" />
+                    </actions>
+                </event-block>
+                <event-block sid="918673058264718">
+                    <conditions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="259602118660765" type="Backgr">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="235400329591938" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">155</param>
+                            <param id="3" name="Y">30</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="591153937459314" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="126082449836027" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;empty&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="231682545294910" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">155</param>
+                            <param id="3" name="Y">50</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="652532177889971" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="460352098907697" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;empty&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="434615196771924" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">155</param>
+                            <param id="3" name="Y">70</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="141748428099093" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="157732313447687" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;empty&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="436214027396719" type="Function">
+                            <param id="0" name="Name">&quot;WrlTextUpdate&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="758590672021175">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="161791199738121" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="248148700013839">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="175040238075701" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="406879176014401" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;empty&quot;</param>
+                        </action>
+                        <action id="2" name="Delete file" sid="222119552493201" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds\World_1.svs&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="373728176309465" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Delete world: &quot;&amp;World&amp;&quot;.&quot;&amp;newline</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="142049774146299">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="663887246561909" type="System">
+                                    <param id="0" name="Object">Text_menu</param>
+                                    <param id="1" name="Expression">Text_menu.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="101800047210785" type="Text_menu">
+                                    <param id="0" name="Text">&quot;empty&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="313163685308822">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="993900703600709" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="617972047813462" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;empty&quot;</param>
+                        </action>
+                        <action id="2" name="Delete file" sid="984647235467854" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds\World_2.svs&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="189536603864936" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Delete world: &quot;&amp;World&amp;&quot;.&quot;&amp;newline</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="315424000321092">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="888998456467234" type="System">
+                                    <param id="0" name="Object">Text_menu</param>
+                                    <param id="1" name="Expression">Text_menu.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="827568956931245" type="Text_menu">
+                                    <param id="0" name="Text">&quot;empty&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="254543668045525">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="788714334956590" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="303618767561986" type="Button">
+                            <param id="0" name="Instance variable">Text</param>
+                            <param id="1" name="Value">&quot;empty&quot;</param>
+                        </action>
+                        <action id="2" name="Delete file" sid="719794953914017" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds\World_3.svs&quot;</param>
+                        </action>
+                        <action id="4" name="Append file" sid="996739001458346" type="NWjs">
+                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Delete world: &quot;&amp;World&amp;&quot;.&quot;&amp;newline</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="828009082440225">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="693607739592660" type="System">
+                                    <param id="0" name="Object">Text_menu</param>
+                                    <param id="1" name="Expression">Text_menu.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="577858403430145" type="Text_menu">
+                                    <param id="0" name="Text">&quot;empty&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="192785514756084">
+            <conditions>
+                <condition id="0" name="On function" sid="313906746553039" type="Function">
+                    <param id="0" name="Name">&quot;SetButtonWorld&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="920670156075721">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="861766130161322" type="System">
+                            <param id="0" name="Object">Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="589443436755977" type="Button" />
+                        <action id="-9" name="Set value" sid="592790981030185" type="System">
+                            <param id="0" name="Variable">Seed</param>
+                            <param id="1" name="Value">int(random(-1000000, 1000000))</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="766439882132693" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">80</param>
+                            <param id="3" name="Y">70</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="462403328578689" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">100</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="471453281153481" type="Button">
+                            <param id="0" name="Width">32</param>
+                            <param id="1" name="Height">16</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="154478702148081" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">70</param>
+                            <param id="3" name="Y">68</param>
+                        </action>
+                        <action id="0" name="Set text" sid="398883632620777" type="Seed_text">
+                            <param id="0" name="Text">&quot;XS&quot;</param>
+                        </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="493045089361310" type="Seed_text">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="412651373159450" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">120</param>
+                            <param id="3" name="Y">70</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="140614267966880" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">101</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="408278565340587" type="Button">
+                            <param id="0" name="Width">32</param>
+                            <param id="1" name="Height">16</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="675569920996639" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">110</param>
+                            <param id="3" name="Y">68</param>
+                        </action>
+                        <action id="0" name="Set text" sid="262393423057767" type="Seed_text">
+                            <param id="0" name="Text">&quot;S&quot;</param>
+                        </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="688526353859690" type="Seed_text">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="373336688016859" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">160</param>
+                            <param id="3" name="Y">70</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="322252596952681" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">102</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="771082770118558" type="Button">
+                            <param id="0" name="Width">32</param>
+                            <param id="1" name="Height">16</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="483104267782807" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">150</param>
+                            <param id="3" name="Y">68</param>
+                        </action>
+                        <action id="0" name="Set text" sid="690565150773392" type="Seed_text">
+                            <param id="0" name="Text">&quot;M&quot;</param>
+                        </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="147443629322651" type="Seed_text">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="431645360723540" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">200</param>
+                            <param id="3" name="Y">70</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="984671803852773" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">103</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="717111604828108" type="Button">
+                            <param id="0" name="Width">32</param>
+                            <param id="1" name="Height">16</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="194622421540340" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">190</param>
+                            <param id="3" name="Y">68</param>
+                        </action>
+                        <action id="0" name="Set text" sid="188767641014436" type="Seed_text">
+                            <param id="0" name="Text">&quot;L&quot;</param>
+                        </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="869083565338374" type="Seed_text">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="479469583720953" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">240</param>
+                            <param id="3" name="Y">70</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="170990064547275" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">104</param>
+                        </action>
+                        <action id="-7" name="Set size" sid="236662266521679" type="Button">
+                            <param id="0" name="Width">32</param>
+                            <param id="1" name="Height">16</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="918405687613577" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">230</param>
+                            <param id="3" name="Y">68</param>
+                        </action>
+                        <action id="0" name="Set text" sid="962980731872327" type="Seed_text">
+                            <param id="0" name="Text">&quot;XL&quot;</param>
+                        </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="881887620456158" type="Seed_text">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="294275078467035" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">240</param>
+                            <param id="3" name="Y">150</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="437108587997509" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">105</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="933564634235375" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">200</param>
+                            <param id="3" name="Y">148</param>
+                        </action>
+                        <action id="0" name="Set text" sid="702242855679693" type="Seed_text">
+                            <param id="0" name="Text">&quot;Create world&quot;</param>
+                        </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="576439136468724" type="Seed_text">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="809905160609736" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">130</param>
+                            <param id="3" name="Y">54</param>
+                        </action>
+                        <action id="0" name="Set text" sid="509332343706151" type="Seed_text">
+                            <param id="0" name="Text">&quot;World size&quot;</param>
+                        </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="410871294409962" type="Seed_text">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="583327721424725" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">80</param>
+                            <param id="3" name="Y">22</param>
+                        </action>
+                        <action id="0" name="Set text" sid="763134400920752" type="Seed_text">
+                            <param id="0" name="Text">&quot;World generation seed&quot;</param>
+                        </action>
+                        <action behavior="Anchor" id="0" name="Set enabled" sid="108578522008734" type="Seed_text">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="762348719525262" type="Stroka">
+                            <param id="0" name="Text">str(Seed)</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="587037237357817" type="Stroka">
+                            <param id="0" name="X">70</param>
+                            <param id="1" name="Y">30</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="468716462959539" type="Stroka">
+                            <param id="0" name="Property name">&quot;background&quot;</param>
+                            <param id="1" name="Value">&quot;transparent&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="648835017649286" type="Stroka">
+                            <param id="0" name="Property name">&quot;border&quot;</param>
+                            <param id="1" name="Value">&quot;none&quot;</param>
+                        </action>
+                        <action id="7" name="Set CSS style" sid="259462735819198" type="Stroka">
+                            <param id="0" name="Property name">&quot;outline&quot;</param>
+                            <param id="1" name="Value">&quot;none&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="420087384587521" type="StrokaTileBack">
+                            <param id="0" name="X">70</param>
+                            <param id="1" name="Y">30</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="575693479880751">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="312242119698358" type="System">
+                            <param id="0" name="Object">Text_menu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="448644404680342" type="Text_menu" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="550418664344691">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="774658229973381" type="System">
+                    <param id="0" name="Object">Button</param>
+                    <param id="1" name="Expression">Button.ID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">100</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="640943804140691">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="754927333133528" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;XS&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="614693855192071" type="Button">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="120448315337443">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="191918114772904" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;XS&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="224928676364499" type="Button">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="180496118463190">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="535666078769883" type="System">
+                    <param id="0" name="Object">Button</param>
+                    <param id="1" name="Expression">Button.ID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">101</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="688824288784418">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="690137280780652" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;S&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="742312630261336" type="Button">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="505484563975568">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="427445130381764" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;S&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="917869169387601" type="Button">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="377530926181490">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="680827152301537" type="System">
+                    <param id="0" name="Object">Button</param>
+                    <param id="1" name="Expression">Button.ID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">102</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="918271666228667">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="616756838279987" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;M&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="770155169160808" type="Button">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="171968217315813">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="409885027211545" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;M&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="539180501800294" type="Button">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="167112871990435">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="974473450389555" type="System">
+                    <param id="0" name="Object">Button</param>
+                    <param id="1" name="Expression">Button.ID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">103</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="497569714319704">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="200220439224509" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;L&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="564212910477017" type="Button">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="432400143475719">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="148955041102780" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;L&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="520860559557178" type="Button">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="922584847757966">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="780566402101748" type="System">
+                    <param id="0" name="Object">Button</param>
+                    <param id="1" name="Expression">Button.ID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">104</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="456032190532260">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="288920634880493" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;XL&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="519538289509196" type="Button">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="822156153503573">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="852862726953680" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">&quot;XL&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="231958876274376" type="Button">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="Buttons" sid="850415894430249" title="SetWorldSize">
+            <sub-events>
+                <event-block sid="215516510613843">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="454851981281419" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Button</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="298165833763908" type="System">
+                            <param id="0" name="Object">Button</param>
+                            <param id="1" name="Expression">Button.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="900394268749618" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Value">&quot;XS&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="245632350571445">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="327244511771842" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Button</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="573037523964144" type="System">
+                            <param id="0" name="Object">Button</param>
+                            <param id="1" name="Expression">Button.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">101</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="719235919194412" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Value">&quot;S&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="581249622637423">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="654981086983586" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Button</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="356346397046907" type="System">
+                            <param id="0" name="Object">Button</param>
+                            <param id="1" name="Expression">Button.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">102</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="229778343749111" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Value">&quot;M&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="558837945253219">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="305295318966233" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Button</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="760909617773687" type="System">
+                            <param id="0" name="Object">Button</param>
+                            <param id="1" name="Expression">Button.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">103</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="625668591809616" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Value">&quot;L&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="906988587186743">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="799029325946115" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Button</param>
+                        </condition>
+                        <condition id="-33" name="Pick by comparison" sid="642475925449682" type="System">
+                            <param id="0" name="Object">Button</param>
+                            <param id="1" name="Expression">Button.ID</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">104</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="734014769543806" type="System">
+                            <param id="0" name="Variable">SizeWorld</param>
+                            <param id="1" name="Value">&quot;XL&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="544229138709816">
+            <conditions>
+                <condition id="1" name="On text changed" sid="565185805498528" type="Stroka" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="658445354029791" type="System">
+                    <param id="0" name="Variable">Seed</param>
+                    <param id="1" name="Value">Stroka.Text</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="762415644394658">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="331096350961958" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+                <condition id="-33" name="Pick by comparison" sid="495191331677272" type="System">
+                    <param id="0" name="Object">Button</param>
+                    <param id="1" name="Expression">Button.ID</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">105</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="310482359372662" type="System">
+                    <param id="0" name="Layout">Game</param>
+                </action>
+                <action id="4" name="Append file" sid="937546751490589" type="NWjs">
+                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Start create world: &quot;&amp;World&amp;&quot;.&quot;&amp;newline</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="908822513369058">
+            <conditions>
+                <condition id="0" name="On function" sid="768744319605649" type="Function">
+                    <param id="0" name="Name">&quot;WrlTextUpdate&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <variable constant="0" name="Y" sid="741443589579578" static="0" type="number">3</variable>
+                <variable constant="0" name="idText" sid="504912198908192" static="0" type="number">1</variable>
+                <variable constant="0" name="tWorld" sid="973390152989396" static="0" type="number">0</variable>
+                <event-block sid="625795019809466">
+                    <conditions>
+                        <condition id="-10" name="For" sid="334907248081656" type="System">
+                            <param id="0" name="Name">&quot;CanvasText&quot;</param>
+                            <param id="1" name="Start index">1</param>
+                            <param id="2" name="End index">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="702764668975200" type="System">
+                            <param id="0" name="Variable">Y</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="950347487978942" type="System">
+                            <param id="0" name="Variable">idText</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Add to" sid="601920894426341" type="System">
+                            <param id="0" name="Variable">tWorld</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="383392187978862" type="System">
+                            <param id="0" name="Object to create">Text_menu</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">110</param>
+                            <param id="3" name="Y">Y</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="188812208716642" type="Text_menu">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">idText</param>
+                        </action>
+                        <action id="0" name="Set text" sid="177135191860094" type="Text_menu">
+                            <param id="0" name="Text">&quot;empty&quot;</param>
+                        </action>
+                        <action id="-24" name="Move to top" sid="998470490822343" type="Text_menu" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="248001106721004">
+                            <conditions>
+                                <condition id="-33" name="Pick by comparison" sid="506907266298748" type="System">
+                                    <param id="0" name="Object">Text_menu</param>
+                                    <param id="1" name="Expression">Text_menu.ID</param>
+                                    <param id="2" name="Comparison">0</param>
+                                    <param id="3" name="Value">idText</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Append file" sid="624287064260107" type="NWjs">
+                                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;1. Check id: &quot;&amp;Text_menu.ID&amp;&quot; SelectID: &quot;&amp;idText&amp;&quot;.&quot;&amp;newline</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="848881462865363">
+                                    <conditions>
+                                        <condition id="0" name="Path exists" sid="152552683090926" type="NWjs">
+                                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds\World_&quot;&amp;tWorld&amp;&quot;.svs&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Set text" sid="260706207160020" type="Text_menu">
+                                            <param id="0" name="Text">&quot;World &quot;&amp;int(NWjs.FileSize(NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Worlds\World_&quot;&amp;tWorld&amp;&quot;.svs&quot;)/1000)&amp;&quot;KB&quot;</param>
+                                        </action>
+                                        <action id="4" name="Append file" sid="434760173959746" type="NWjs">
+                                            <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                                            <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;2. Check na sushiestvovanije mira, Sozdanie texta&quot;&amp;&quot;.&quot;&amp;newline</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="935170583310217">
+                                            <conditions>
+                                                <condition id="-33" name="Pick by comparison" sid="707939465727958" type="System">
+                                                    <param id="0" name="Object">Button</param>
+                                                    <param id="1" name="Expression">Button.ID</param>
+                                                    <param id="2" name="Comparison">0</param>
+                                                    <param id="3" name="Value">idText</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="240623922272829" type="Button">
+                                                    <param id="0" name="Instance variable">Text</param>
+                                                    <param id="1" name="Value">&quot;World &quot;&amp;tWorld</param>
+                                                </action>
+                                                <action id="4" name="Append file" sid="418238519606082" type="NWjs">
+                                                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                                                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;3. Selectet button id=&quot;&amp;idText&amp;&quot;, and set button text world &quot;&amp;tWorld&amp;&quot;: &quot;&amp;Button.Text&amp;&quot;.&quot;&amp;newline</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="165735457237350">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="996561984925645" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="295268832717223" type="Button">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">400</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="763537100071184" type="Function">
+                    <param id="0" name="Name">&quot;OptionsButtonCreate&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="251569199897384">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="318159139528466" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="996890068467264" type="Button">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">402</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="386018168901127" type="System" />
+            </actions>
+        </event-block>
+        <event-block sid="717816399572869">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="165487772732873" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Button</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="685055938450971" type="Button">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">401</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Append file" sid="609136197291129" type="NWjs">
+                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Button &apos;Autosave&apos; clicked&quot;&amp;&quot;.&quot;&amp;newline</param>
+                </action>
+                <action id="-10" name="Add to" sid="234153433916480" type="System">
+                    <param id="0" name="Variable">Perekluchatel</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="566049619210096">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="664650754033747" type="System">
+                            <param id="0" name="Variable">Perekluchatel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="425685656863761">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="553311293931148" type="System">
+                                    <param id="0" name="Variable">Conf_Autosave</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;False&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="736966354753469" type="System">
+                                    <param id="0" name="Variable">Conf_Autosave</param>
+                                    <param id="1" name="Value">&quot;True&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="292369544609911" type="System">
+                                    <param id="0" name="Variable">Perekluchatel</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Append file" sid="126188945737032" type="NWjs">
+                                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Set Config: &quot;&amp;Conf_Autosave&amp;&quot;.&quot;&amp;newline</param>
+                                </action>
+                                <action id="0" name="Write file" sid="518002288650604" type="NWjs">
+                                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Autosave.conf&quot;</param>
+                                    <param id="1" name="Contents">Conf_Autosave</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="574447611828078">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="274303299203615" type="System">
+                            <param id="0" name="Variable">Perekluchatel</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="734024161209997">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="227341924053814" type="System">
+                                    <param id="0" name="Variable">Conf_Autosave</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;True&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="816437111680100" type="System">
+                                    <param id="0" name="Variable">Conf_Autosave</param>
+                                    <param id="1" name="Value">&quot;False&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="449801921577448" type="System">
+                                    <param id="0" name="Variable">Perekluchatel</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Append file" sid="302282020673719" type="NWjs">
+                                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Logs\&quot;&amp;Date.Date&amp;&quot;-&quot;&amp;Date.Month&amp;&quot;-&quot;&amp;Date.Year&amp;&quot;-logs.txt&quot;</param>
+                                    <param id="1" name="Contents">&quot;[&quot;&amp;Date.Hours&amp;&quot;:&quot;&amp;Date.Minutes&amp;&quot;:&quot;&amp;Date.Seconds&amp;&quot;:&quot;&amp;Date.Milliseconds&amp;&quot;]: &quot;&amp;&quot;Set Config: &quot;&amp;Conf_Autosave&amp;&quot;.&quot;&amp;newline</param>
+                                </action>
+                                <action id="0" name="Write file" sid="883765907484526" type="NWjs">
+                                    <param id="0" name="Path">NWjs.UserFolder&amp;&quot;\AppData\SMgames\Tech-Industrial\Autosave.conf&quot;</param>
+                                    <param id="1" name="Contents">Conf_Autosave</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="784286222220575">
+            <conditions>
+                <condition id="-33" name="Pick by comparison" sid="988509011763046" type="System">
+                    <param id="0" name="Object">Seed_text</param>
+                    <param id="1" name="Expression">Seed_text.id</param>
+                    <param id="2" name="Comparison">0</param>
+                    <param id="3" name="Value">401</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="726363809543364">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="823555537759235" type="System">
+                            <param id="0" name="Variable">Conf_Autosave</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;True&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="109914076290054" type="Seed_text">
+                            <param id="0" name="Text">&quot;Autosave: ON&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="641844654832619">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="501724335608675" type="System">
+                            <param id="0" name="Variable">Conf_Autosave</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;False&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="876862766128716" type="Seed_text">
+                            <param id="0" name="Text">&quot;Autosave: OFF&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="563220127405061">
+            <conditions>
+                <condition id="0" name="On function" sid="352549818111184" type="Function">
+                    <param id="0" name="Name">&quot;OptionsButtonCreate&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="650333687894531" type="Backgr">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="563590600940998">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="425544369786283" type="System">
+                            <param id="0" name="Object">Button</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="403538428615352" type="Button" />
+                    </actions>
+                </event-block>
+                <event-block sid="121597902680380">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="298221120263743" type="System">
+                            <param id="0" name="Object">Seed_text</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="289543459075367" type="Seed_text" />
+                    </actions>
+                </event-block>
+                <event-block sid="680059880426713">
+                    <conditions>
+                        <condition id="-19" name="Pick all" sid="829349735703771" type="System">
+                            <param id="0" name="Object">Text_menu</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="472515856864193" type="Text_menu" />
+                    </actions>
+                </event-block>
+                <event-block sid="626725349405539">
+                    <conditions />
+                    <actions>
+                        <action id="-3" name="Create object" sid="587596595288825" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">155</param>
+                            <param id="3" name="Y">30</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="852044832556343" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">401</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="451610174341498" type="System">
+                            <param id="0" name="Object to create">Button</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">60</param>
+                            <param id="3" name="Y">155</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="350908367362982" type="Button">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Value">402</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="474722016383281" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">50</param>
+                            <param id="3" name="Y">167</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="207742490601027" type="Seed_text">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Value">402</param>
+                        </action>
+                        <action id="0" name="Set text" sid="809651780965316" type="Seed_text">
+                            <param id="0" name="Text">&quot;Done&quot;</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="773910448348756" type="System">
+                            <param id="0" name="Object to create">Seed_text</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="X">120</param>
+                            <param id="3" name="Y">42</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="385482984708343" type="Seed_text">
+                            <param id="0" name="Instance variable">id</param>
+                            <param id="1" name="Value">401</param>
+                        </action>
+                        <action id="0" name="Set text" sid="805121085262932" type="Seed_text">
+                            <param id="0" name="Text">&quot;Autosave: ON&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="642937365253123">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="892323333836265" type="System">
+                            <param id="0" name="Object">Seed_text</param>
+                            <param id="1" name="Expression">Seed_text.id</param>
+                            <param id="2" name="Comparison">0</param>
+                            <param id="3" name="Value">401</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="302362408224006">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="745355462127642" type="System">
+                                    <param id="0" name="Variable">Conf_Autosave</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;True&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="872146880174822" type="Seed_text">
+                                    <param id="0" name="Text">&quot;Autosave: ON&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="547832041739246">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="334201472972925" type="System">
+                                    <param id="0" name="Variable">Conf_Autosave</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;False&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Set text" sid="509007601189686" type="Seed_text">
+                                    <param id="0" name="Text">&quot;Autosave: OFF&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="712117403506046">
+            <conditions>
+                <condition id="-19" name="Pick all" sid="290877075612397" type="System">
+                    <param id="0" name="Object">Seed_text</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Anchor" id="0" name="Set enabled" sid="190078129759747" type="Seed_text">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
